@@ -41,7 +41,7 @@ public abstract class AstUniOp extends AstPrimitive {
                 nc.addNum(op(c.atd(i)));
             }
           }
-        }.doAll(fr.numCols(), Vec.T_NUM, fr).outputFrame());
+        }.doAll(fr.numCols(), Vec.T_NUM, fr).outputFrame(fr.names(), fr.domains()));
       case Val.ROW:
         double[] ds = new double[val.getRow().length];
         for (int i = 0; i < ds.length; ++i)
